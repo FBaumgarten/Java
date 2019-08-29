@@ -5,11 +5,9 @@ import java.util.Scanner;
 public class Wiederholung {
 
     static int eingabe(){
-
         Scanner sc = new Scanner(System.in);
         System.out.println("Ganzzahl eingeben: ");
         return sc.nextInt();
-
     }
 
     static int verarbeitung( int zahl){
@@ -23,4 +21,5 @@ public class Wiederholung {
     public static void main(String[] args) {
         ausgabe(verarbeitung(eingabe()));
     }
+
 }
