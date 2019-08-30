@@ -18,22 +18,14 @@ public class Radio {
     }
 
     public void setLautstaerke(int lautstaerke) {
-        if (lautstaerke>=0 && lautstaerke<=10 ) {
-            this.lautstaerke = lautstaerke;
-        } else {
-            this.lautstaerke = 5;
-        }
+        this.lautstaerke = (lautstaerke>=0 && lautstaerke<=10 ) ? lautstaerke : 5;
     }
 
     public double getFrequenz() {
         return frequenz;
     }
     public void setFrequenz(double frequenz) {
-        if (frequenz>=85.0f && frequenz<=110.0f){
-            this.frequenz = frequenz;
-        } else {
-            setFrequenz(99.9f);
-        }
+        this.frequenz = (frequenz>=85.0f && frequenz<=110.0f) ? frequenz : 99.9f;
     }
 
     public Radio() {
