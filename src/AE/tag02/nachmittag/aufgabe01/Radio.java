@@ -18,27 +18,34 @@ public class Radio {
     }
 
     public void setLautstaerke(int lautstaerke) {
-        this.lautstaerke = lautstaerke;
+        if (lautstaerke>=0 && lautstaerke<=10 ) {
+            this.lautstaerke = lautstaerke;
+        } else {
+            this.lautstaerke = 5;
+        }
     }
 
     public double getFrequenz() {
         return frequenz;
     }
-
     public void setFrequenz(double frequenz) {
-        this.frequenz = frequenz;
+        if (frequenz>=85.0f && frequenz<=110.0f){
+            this.frequenz = frequenz;
+        } else {
+            setFrequenz(99.9f);
+        }
     }
 
     public Radio() {
-        setLautstaerke(0);
+        setLautstaerke(5);
         setEingaschaltet(false);
         setFrequenz(99.9f);
     }
 
     public Radio(boolean eingaschaltet, int lautstaerke, float frequenz) {
-        this.eingaschaltet = eingaschaltet;
-        this.lautstaerke = lautstaerke;
-        this.frequenz = frequenz;
+        setEingaschaltet(eingaschaltet);
+        setLautstaerke(lautstaerke);
+        setFrequenz(frequenz);
     }
 
     @Override
@@ -47,12 +54,11 @@ public class Radio {
     }
 
     public void waehleSender(double frequenz){
-        if (frequenz <= 110.0f && frequenz >= 85.0f) setFrequenz(frequenz);
-        else setFrequenz(99.9f);
+        setFrequenz(frequenz);
     }
 
     public void lauter(){
-        if (getLautstaerke()<10)setLautstaerke(getLautstaerke()+1);
+        if (getLautstaerke()<10)setLautstaerke(getLautstaerke() + 1);
     }
 
     public void leiser(){
