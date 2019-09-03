@@ -10,7 +10,7 @@ public class Perieodensystem {
     }
 
     public boolean hasElement(Element e){
-        if (getElement(e.getOrdnungszahl() - 1)!=null){
+        if (getElement(e.getOrdnungszahl() - 1)!=null) {
             return true;
         }
         return false;
@@ -33,7 +33,11 @@ public class Perieodensystem {
     public void listMetals(){
         for (Element e: elements) {
             if (e != null && e.getClass().getSimpleName().equals("Metal")){
-                System.out.println(e);
+                Metal m = (Metal) e;
+                if (!m.isHalbmetal()){
+                    System.out.println(e);
+                }
+
             }
         }
     }

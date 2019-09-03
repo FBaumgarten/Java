@@ -21,16 +21,6 @@ public class Pruefung {
         }
     }
 
-    @Override
-    public String toString() {
-        return "Pruefung{" +
-                "maxPunkte=" + maxPunkte +
-                ", erziehltePunkte=" + erziehltePunkte +
-                ", prozent=" + berechnePunkte() +
-                ", note=" + getNote() +
-                '}';
-    }
-
     int getErziehltePunkte() {
         return erziehltePunkte;
     }
@@ -41,6 +31,16 @@ public class Pruefung {
         } else {
             this.erziehltePunkte = -1;
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Pruefung{" +
+                "maxPunkte=" + maxPunkte +
+                ", erziehltePunkte=" + erziehltePunkte +
+                ", prozent=" + berechnePunkte() +
+                ", note=" + getNote() +
+                '}';
     }
 
     private double berechnePunkte(){

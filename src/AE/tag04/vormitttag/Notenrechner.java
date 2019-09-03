@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class Notenrechner {
     private static ArrayList<Pruefung> pruefungsListe = new ArrayList<>();
 
-
     private static double berechneDurchschnitt() {
         int summe = 0;
         for (Pruefung pruefung:pruefungsListe) summe += pruefung.getNote();
@@ -25,17 +24,18 @@ public class Notenrechner {
         else System.out.println("Unzulässige Werteingabe!");
     }
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("IHK Notenrechner");
-        System.out.println("================");
-        loop(scanner);
+    private static void printResult() {
         System.out.println(pruefungsListe);
         System.out.println("Durchschnittsnote: " + berechneDurchschnitt());
-        scanner.close();
     }
 
-    private static void loop(Scanner scanner) {
+    private static void printHead() {
+        System.out.println("IHK Notenrechner");
+        System.out.println("================");
+    }
+
+    private static void loop() {
+        Scanner scanner = new Scanner(System.in);
         while (true){
             eingabe(scanner);
             System.out.println();
@@ -43,6 +43,12 @@ public class Notenrechner {
             String abbruch = scanner.next();
             if (abbruch.equals("N") || abbruch.equals("n")) break;
         }
+        scanner.close();
     }
 
+    public static void main(String[] args) {
+        printHead();
+        loop();
+        printResult();
+    }
 }
