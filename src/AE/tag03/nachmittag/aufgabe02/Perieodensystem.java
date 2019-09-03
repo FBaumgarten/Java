@@ -26,9 +26,7 @@ public class Perieodensystem {
 
     public void listElements(){
         for (Element e: elements) {
-            if (e != null){
-                System.out.println(e);
-            }
+            if (e != null) System.out.println(e);
         }
     }
 
@@ -52,6 +50,7 @@ public class Perieodensystem {
 
         //perieodensystem.listElements();
         perieodensystem.listMetals();
+        System.out.println();
         System.out.println(perieodensystem.getElement(79));
     }
 }

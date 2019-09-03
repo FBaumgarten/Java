@@ -3,8 +3,8 @@ package AE.tag03.nachmittag.aufgabe01;
 public class Fahrzeuge {
     private double position;
     private int speed;
-    public static final int MAXSPEED = 0;
-    public static final int WHEELS = 0;
+    private int maxSpeed = 0;
+    private int wheels = 0;
 
     public double getPosition() {
         return position;
@@ -19,7 +19,7 @@ public class Fahrzeuge {
     }
 
     public void setSpeed(int speed) {
-        this.speed = speed <= MAXSPEED ? speed : 0;
+        this.speed = speed <= maxSpeed ? speed : 0;
     }
 
     public Fahrzeuge(int position, int speed) {
@@ -35,11 +35,14 @@ public class Fahrzeuge {
 
     @Override
     public String toString() {
-        return "Pos: " + getPosition() + " Geschw: " + getSpeed() + " Max: " + MAXSPEED + " Räder: " + WHEELS;
+        return "Pos: " + getPosition() +
+                " Geschw: " + getSpeed() +
+                " Max: " + maxSpeed +
+                " Räder: " + wheels;
     }
 
     public void move (double minutes){
-        if (minutes >= 0){
+        if (minutes > 0 && getSpeed() > 0){
             setPosition(getPosition() + (getSpeed() / 60 * minutes));
         }
     }

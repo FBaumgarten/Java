@@ -1,50 +1,53 @@
 package AE.tag04.vormitttag;
 
-import java.util.Scanner;
-
 public class Pruefung {
     private int maxPunkte;
     private int erziehltePunkte;
 
-    public Pruefung(int maxPunkte, int erziehltePunkte) {
-        setMaxPunkte(maxPunkte);
-        setErziehltePunkte(erziehltePunkte);
-    }
-
-    public Pruefung() {
+    Pruefung() {
         setMaxPunkte(0);
         setErziehltePunkte(0);
     }
 
-    public int getMaxPunkte() {
+    int getMaxPunkte() {
         return maxPunkte;
     }
 
-    public void setMaxPunkte(int maxPunkte) {
-        if (maxPunkte <= 100){
+    void setMaxPunkte(int maxPunkte) {
+        if (maxPunkte <= 100 && maxPunkte > 0){
             this.maxPunkte = maxPunkte;
         } else {
             this.maxPunkte = -1;
         }
     }
 
-    public int getErziehltePunkte() {
+    @Override
+    public String toString() {
+        return "Pruefung{" +
+                "maxPunkte=" + maxPunkte +
+                ", erziehltePunkte=" + erziehltePunkte +
+                ", prozent=" + berechnePunkte() +
+                ", note=" + getNote() +
+                '}';
+    }
+
+    int getErziehltePunkte() {
         return erziehltePunkte;
     }
 
-    public void setErziehltePunkte(int erziehltePunkte) {
+    void setErziehltePunkte(int erziehltePunkte) {
         if (erziehltePunkte <= getMaxPunkte()){
             this.erziehltePunkte = erziehltePunkte;
         } else {
-            this.erziehltePunkte = 0;
+            this.erziehltePunkte = -1;
         }
     }
 
-    public double berechnePunkte(){
+    private double berechnePunkte(){
         return 100.0f / maxPunkte * erziehltePunkte;
     }
 
-    public int getNote(){
+    int getNote(){
         double punkte = this.berechnePunkte();
         if (punkte <= 29)return 6;
         else if (punkte <= 49) return 5;

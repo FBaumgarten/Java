@@ -8,7 +8,7 @@ public class Element {
     private int aggregat25c; //Fest=1, Flüssig=2, Gasförmig=3
     private boolean hauptgruppe;
 
-    public String getName() {
+    String getName() {
         return name;
     }
 

@@ -1,8 +1,8 @@
 package AE.tag03.nachmittag.aufgabe01;
 
 public class Auto extends Fahrzeuge {
-    public static final int MAXSPEED = 140;
-    public static final int WHEELS = 4;
+    private int maxSpeed = 140;
+    private int wheels = 4;
 
     public Auto(int position, int speed) {
         super(position, speed);
