@@ -25,7 +25,10 @@ public class Notenrechner {
     }
 
     private static void printResult() {
-        System.out.println(pruefungsListe);
+        String ausgabe = pruefungsListe.toString();
+        ausgabe = ausgabe.replace("{",": ");
+        ausgabe = ausgabe.replace("},","\n");
+        System.out.println(ausgabe);
         System.out.println("Durchschnittsnote: " + berechneDurchschnitt());
     }
 
