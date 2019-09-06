@@ -1,7 +1,7 @@
 package AE.tag04.vormitttag;
 
 public class Pruefung {
-    private int maxPunkte;
+    private  int maxPunkte;
     private int erziehltePunkte;
 
     Pruefung() {
