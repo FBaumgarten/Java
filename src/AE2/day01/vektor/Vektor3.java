@@ -22,6 +22,6 @@ public class Vektor3 extends Vektor2 {
 
     @Override
     public String toString() {
-        return "( " + getX() + " | " + getY() + " | " + getZ() + " )";
+        return String.format("( %.2f | %.2f | %.2f )",getX(),getY(),getZ());
     }
 }

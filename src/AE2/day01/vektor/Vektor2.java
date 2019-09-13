@@ -30,7 +30,7 @@ public class Vektor2 {
 
     @Override
     public String toString() {
-        return "( " + getX() + " | " + getY() + " )";
+        return String.format("( %.2f | %.2f )",getX(),getY());
     }
 
     public Vektor2 addVektor(Vektor2 vektor2){
