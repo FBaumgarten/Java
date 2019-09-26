@@ -72,16 +72,14 @@ public class LogEntry {
     }
 
     public void parseString(String lineToParse){
-        String[] split1 = lineToParse.split(Pattern.quote(" - "));
-        setMessage(split1[1]);
-        String[] split2 = split1[0].split(Pattern.quote("  "));
-        String[] split3 = split2[0].split(Pattern.quote(" "));
-        String[] split4 = split2[1].split(Pattern.quote(" "));
-        setDate(split3[0]);
-        setTime(split3[1]);
-        setType(split3[2]);
-        setProcess(split4[0]);
-        setClazz(split4[1] + " " + split4[2]);
+        String line = lineToParse;
+        String[] split = line.split(Pattern.quote(" - "));
+        setMessage(split[1]);
+        setProcess(line.substring(line.indexOf("[")+1,line.indexOf("]")));
+        setClazz(split[0].substring(line.indexOf("]")+2));
+        setDate(line.substring(0,10));
+        setTime(line.substring(11,23));
+        setType(line.substring(24,line.indexOf(" ",24)));
     }
 
     @Override
