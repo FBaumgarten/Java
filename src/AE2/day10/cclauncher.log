@@ -1,0 +1,60 @@
+2019-09-26 07:56:08,347 INFO  [main] updater.StartApplication (StartApplication.java:20) - networkaddress.cache.ttl=300
+2019-09-26 07:56:08,351 INFO  [main] updater.StartApplication (StartApplication.java:21) - networkaddress.cache.negative.ttl=0
+2019-09-26 07:56:08,589 INFO  [JavaFX Application Thread] helper.Toolkit (Toolkit.java:87) - Class path: file:/C:/CCLauncher-Client-3/CCLauncher_Client_3.0.exe
+2019-09-26 07:56:08,590 INFO  [JavaFX Application Thread] helper.Toolkit (Toolkit.java:128) - Pfad zur App: C:\CCLauncher-Client-3
+2019-09-26 07:56:08,591 INFO  [JavaFX Application Thread] helper.Toolkit (Toolkit.java:87) - Class path: file:/C:/CCLauncher-Client-3/CCLauncher_Client_3.0.exe
+2019-09-26 07:56:08,591 INFO  [JavaFX Application Thread] helper.Toolkit (Toolkit.java:128) - Pfad zur App: C:\CCLauncher-Client-3
+2019-09-26 07:56:08,591 INFO  [JavaFX Application Thread] helper.Toolkit (Toolkit.java:87) - Class path: file:/C:/CCLauncher-Client-3/CCLauncher_Client_3.0.exe
+2019-09-26 07:56:08,592 INFO  [JavaFX Application Thread] helper.Toolkit (Toolkit.java:128) - Pfad zur App: C:\CCLauncher-Client-3
+2019-09-26 07:56:08,592 INFO  [JavaFX Application Thread] helper.Toolkit (Toolkit.java:87) - Class path: file:/C:/CCLauncher-Client-3/CCLauncher_Client_3.0.exe
+2019-09-26 07:56:08,593 INFO  [JavaFX Application Thread] helper.Toolkit (Toolkit.java:128) - Pfad zur App: C:\CCLauncher-Client-3
+2019-09-26 07:56:08,593 INFO  [JavaFX Application Thread] helper.Toolkit (Toolkit.java:87) - Class path: file:/C:/CCLauncher-Client-3/CCLauncher_Client_3.0.exe
+2019-09-26 07:56:08,593 INFO  [JavaFX Application Thread] helper.Toolkit (Toolkit.java:128) - Pfad zur App: C:\CCLauncher-Client-3
+2019-09-26 07:56:31,071 INFO  [Thread-5] services.CommunicationLayer (CommunicationLayer.java:120) - Verbunden: https://launcher201.comcave.de:8182
+2019-09-26 07:56:31,220 INFO  [Thread-5] updater.LauncherUpdaterClient$1 (LauncherUpdaterClient.java:94) - checkComplete
+2019-09-26 07:56:31,220 INFO  [JavaFX Application Thread] updater.LauncherUpdaterClient (LauncherUpdaterClient.java:47) - Run after Update
+2019-09-26 07:56:34,224 INFO  [JavaFX Application Thread] updater.LauncherUpdaterClient (LauncherUpdaterClient.java:189) - detectedOs: Windows
+2019-09-26 07:56:34,224 INFO  [JavaFX Application Thread] updater.LauncherUpdaterClient (LauncherUpdaterClient.java:205) - Rufe auf: C:\CCLauncher-Client-3\jre\bin\java
+2019-09-26 07:56:34,682 INFO  [main] client.StartApplication (StartApplication.java:18) - networkaddress.cache.ttl=300
+2019-09-26 07:56:34,682 INFO  [main] client.StartApplication (StartApplication.java:19) - networkaddress.cache.negative.ttl=0
+2019-09-26 07:56:34,885 INFO  [JavaFX Application Thread] helper.Toolkit (Toolkit.java:88) - Class path: file:/C:/CCLauncher-Client-3/cc-launcher-client.jar
+2019-09-26 07:56:34,886 INFO  [JavaFX Application Thread] helper.Toolkit (Toolkit.java:129) - Pfad zur App: C:\CCLauncher-Client-3
+2019-09-26 07:56:34,887 INFO  [JavaFX Application Thread] helper.Toolkit (Toolkit.java:88) - Class path: file:/C:/CCLauncher-Client-3/cc-launcher-client.jar
+2019-09-26 07:56:34,887 INFO  [JavaFX Application Thread] helper.Toolkit (Toolkit.java:129) - Pfad zur App: C:\CCLauncher-Client-3
+2019-09-26 07:56:34,887 INFO  [JavaFX Application Thread] helper.Toolkit (Toolkit.java:88) - Class path: file:/C:/CCLauncher-Client-3/cc-launcher-client.jar
+2019-09-26 07:56:34,887 INFO  [JavaFX Application Thread] helper.Toolkit (Toolkit.java:129) - Pfad zur App: C:\CCLauncher-Client-3
+2019-09-26 07:56:34,888 INFO  [JavaFX Application Thread] helper.Toolkit (Toolkit.java:88) - Class path: file:/C:/CCLauncher-Client-3/cc-launcher-client.jar
+2019-09-26 07:56:34,888 INFO  [JavaFX Application Thread] helper.Toolkit (Toolkit.java:129) - Pfad zur App: C:\CCLauncher-Client-3
+2019-09-26 07:56:34,888 INFO  [JavaFX Application Thread] helper.Toolkit (Toolkit.java:88) - Class path: file:/C:/CCLauncher-Client-3/cc-launcher-client.jar
+2019-09-26 07:56:34,889 INFO  [JavaFX Application Thread] helper.Toolkit (Toolkit.java:129) - Pfad zur App: C:\CCLauncher-Client-3
+2019-09-26 07:56:34,968 INFO  [JavaFX Application Thread] client.LauncherClient (LauncherClient.java:53) - Methode: start Neue LOG Ausgabe
+2019-09-26 07:56:35,625 INFO  [Thread-6] services.BusinessLayer (BusinessLayer.java:107) - Verbunden mit Parameter: https://launcher201.comcave.de:8182
+2019-09-26 07:56:43,698 INFO  [JavaFX Application Thread] helper.Toolkit (Toolkit.java:88) - Class path: file:/C:/CCLauncher-Client-3/cc-launcher-client.jar
+2019-09-26 07:56:44,315 INFO  [JavaFX Application Thread] sound.PlaySound (PlaySound.java:70) - Sound stop: ping.mp3
+2019-09-26 07:56:44,315 INFO  [JavaFX Application Thread] sound.PlaySound (PlaySound.java:73) - Sound start: ping.mp3, volume: 0.6
+2019-09-26 07:56:46,501 INFO  [Timer-0] services.PingClient (PingClient.java:218) - refreshPingList!
+2019-09-26 07:56:47,396 INFO  [Thread-739] gui.LauncherPingLogger (LauncherPingLogger.java:56) - 26.09.2019 07:56:47: Ping erfolgreich
+2019-09-26 07:57:17,465 INFO  [Thread-740] gui.LauncherPingLogger (LauncherPingLogger.java:56) - 26.09.2019 07:57:17: Ping erfolgreich
+2019-09-26 07:57:47,548 INFO  [Thread-741] gui.LauncherPingLogger (LauncherPingLogger.java:56) - 26.09.2019 07:57:47: Ping erfolgreich
+2019-09-26 07:58:17,487 INFO  [Thread-742] gui.LauncherPingLogger (LauncherPingLogger.java:56) - 26.09.2019 07:58:17: Ping erfolgreich
+2019-09-26 07:58:47,470 INFO  [Thread-743] gui.LauncherPingLogger (LauncherPingLogger.java:56) - 26.09.2019 07:58:47: Ping erfolgreich
+2019-09-26 07:59:17,471 INFO  [Thread-744] gui.LauncherPingLogger (LauncherPingLogger.java:56) - 26.09.2019 07:59:17: Ping erfolgreich
+2019-09-26 07:59:47,463 INFO  [Thread-745] gui.LauncherPingLogger (LauncherPingLogger.java:56) - 26.09.2019 07:59:47: Ping erfolgreich
+2019-09-26 08:00:17,476 INFO  [Thread-746] gui.LauncherPingLogger (LauncherPingLogger.java:56) - 26.09.2019 08:00:17: Ping erfolgreich
+2019-09-26 08:00:47,466 INFO  [Thread-747] gui.LauncherPingLogger (LauncherPingLogger.java:56) - 26.09.2019 08:00:47: Ping erfolgreich
+2019-09-26 08:01:17,466 INFO  [Thread-748] gui.LauncherPingLogger (LauncherPingLogger.java:56) - 26.09.2019 08:01:17: Ping erfolgreich
+2019-09-26 08:01:46,485 INFO  [Timer-0] services.PingClient (PingClient.java:218) - refreshPingList!
+2019-09-26 08:01:47,367 INFO  [Thread-749] gui.LauncherPingLogger (LauncherPingLogger.java:56) - 26.09.2019 08:01:47: Ping erfolgreich
+2019-09-26 08:02:17,469 INFO  [Thread-750] gui.LauncherPingLogger (LauncherPingLogger.java:56) - 26.09.2019 08:02:17: Ping erfolgreich
+2019-09-26 08:02:47,469 INFO  [Thread-751] gui.LauncherPingLogger (LauncherPingLogger.java:56) - 26.09.2019 08:02:47: Ping erfolgreich
+2019-09-26 08:03:17,480 INFO  [Thread-752] gui.LauncherPingLogger (LauncherPingLogger.java:56) - 26.09.2019 08:03:17: Ping erfolgreich
+2019-09-26 08:03:47,478 INFO  [Thread-753] gui.LauncherPingLogger (LauncherPingLogger.java:56) - 26.09.2019 08:03:47: Ping erfolgreich
+2019-09-26 08:04:17,476 INFO  [Thread-754] gui.LauncherPingLogger (LauncherPingLogger.java:56) - 26.09.2019 08:04:17: Ping erfolgreich
+2019-09-26 08:04:47,488 INFO  [Thread-755] gui.LauncherPingLogger (LauncherPingLogger.java:56) - 26.09.2019 08:04:47: Ping erfolgreich
+2019-09-26 08:05:17,720 INFO  [Thread-756] gui.LauncherPingLogger (LauncherPingLogger.java:56) - 26.09.2019 08:05:17: Ping erfolgreich
+2019-09-26 08:05:47,590 INFO  [Thread-757] gui.LauncherPingLogger (LauncherPingLogger.java:56) - 26.09.2019 08:05:47: Ping erfolgreich
+2019-09-26 08:06:17,556 INFO  [Thread-758] gui.LauncherPingLogger (LauncherPingLogger.java:56) - 26.09.2019 08:06:17: Ping erfolgreich
+2019-09-26 08:06:46,484 INFO  [Timer-0] services.PingClient (PingClient.java:218) - refreshPingList!
+2019-09-26 08:06:47,373 INFO  [Thread-759] gui.LauncherPingLogger (LauncherPingLogger.java:56) - 26.09.2019 08:06:47: Ping erfolgreich
+2019-09-26 08:07:17,486 INFO  [Thread-760] gui.LauncherPingLogger (LauncherPingLogger.java:56) - 26.09.2019 08:07:17: Ping erfolgreich
+2019-09-26 08:07:47,494 INFO  [Thread-761] gui.LauncherPingLogger (LauncherPingLogger.java:56) - 26.09.2019 08:07:47: Ping erfolgreich

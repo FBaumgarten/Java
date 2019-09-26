@@ -1,6 +1,6 @@
 package AE2.day02.generic;
 
-public class Queue {
+public class Queue <T>{
     private Node startNode;
 
     public Node getStartNode() {
@@ -22,7 +22,7 @@ public class Queue {
     public void enqueue(Node node){
         if (startNode == null) setStartNode(node);
         else {
-            Node run = getStartNode().getNext();
+            Node run = getStartNode();
             while (run.hasNext()){
                 run = run.getNext();
             }
@@ -30,11 +30,16 @@ public class Queue {
         }
     }
 
+    public void enqueue(T  value){
+        Node<T> node = new Node<>(value);
+        enqueue(node);
+    }
+
     public Node dequeue(){
         if (startNode == null) return null;
         else {
             Node oldStartNode = startNode;
-            startNode = startNode.getNext();
+            setStartNode(startNode.getNext());
             return oldStartNode;
         }
     }
