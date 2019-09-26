@@ -1,6 +1,7 @@
 package AE2.day10;
 
 import javax.swing.plaf.synth.SynthRadioButtonMenuItemUI;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class LogEntry {
@@ -73,13 +74,22 @@ public class LogEntry {
 
     public void parseString(String lineToParse){
         String line = lineToParse;
-        String[] split = line.split(Pattern.quote(" - "));
-        setMessage(split[1]);
-        setProcess(line.substring(line.indexOf("[")+1,line.indexOf("]")));
-        setClazz(split[0].substring(line.indexOf("]")+2));
-        setDate(line.substring(0,10));
-        setTime(line.substring(11,23));
-        setType(line.substring(24,line.indexOf(" ",24)));
+//        String[] split = line.split(Pattern.quote(" - "));
+//        setMessage(split[1]);
+//        setProcess(line.substring(line.indexOf("[")+1,line.indexOf("]")));
+//        setClazz(split[0].substring(line.indexOf("]")+2));
+//        setDate(line.substring(0,10));
+//        setTime(line.substring(11,23));
+//        setType(line.substring(24,line.indexOf(" ",24)));
+        String regex = "(\\d{4}-\\d{2}-\\d{2}) (\\d{2}:\\d{2}:\\d{2},\\d{3}) (.*)  \\[(.*)\\] (.*\\(.*\\)) - (.*)";
+        String result = line.replaceAll(regex, "$1;$2;$3;$4;$5;$6");
+        String[] strings = result.split(Pattern.quote(";"));
+        setDate(strings[0]);
+        setTime(strings[1]);
+        setType(strings[2]);
+        setProcess(strings[3]);
+        setClazz(strings[4]);
+        setMessage(strings[5]);
     }
 
     @Override
