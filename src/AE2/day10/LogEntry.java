@@ -81,26 +81,24 @@ public class LogEntry {
 //        setDate(line.substring(0,10));
 //        setTime(line.substring(11,23));
 //        setType(line.substring(24,line.indexOf(" ",24)));
-        String regex = "(\\d{4}-\\d{2}-\\d{2}) (\\d{2}:\\d{2}:\\d{2},\\d{3}) (.*)  \\[(.*)\\] (.*\\(.*\\)) - (.*)";
+        String regex = "(\\d{4}-\\d{2}-\\d{2}) (\\d{2}:\\d{2}:\\d{2},\\d{3}) (.*) {2}\\[(.*)] (.*\\(.*\\)) - (.*)";
         String result = line.replaceAll(regex, "$1;$2;$3;$4;$5;$6");
         String[] strings = result.split(Pattern.quote(";"));
-        setDate(strings[0]);
-        setTime(strings[1]);
-        setType(strings[2]);
-        setProcess(strings[3]);
-        setClazz(strings[4]);
-        setMessage(strings[5]);
+        setDate     (strings[0]);
+        setTime     (strings[1]);
+        setType     (strings[2]);
+        setProcess  (strings[3]);
+        setClazz    (strings[4]);
+        setMessage  (strings[5]);
     }
 
     @Override
     public String toString() {
-        return "LogEntry{" +
-                "date='" + date + '\'' +
-                ", time='" + time + '\'' +
-                ", type='" + type + '\'' +
-                ", process='" + process + '\'' +
-                ", clazz='" + clazz + '\'' +
-                ", message='" + message + '\'' +
-                '}';
+        return getDate() + ";"
+                + getTime() + ";"
+                + getType() + ";"
+                + getProcess() + ";"
+                + getClazz() + ";"
+                + getMessage();
     }
 }
