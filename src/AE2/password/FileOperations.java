@@ -1,20 +1,9 @@
 package AE2.password;
 
 import java.io.*;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class FileOperations {
-    public static void writeString (String stringToWrite, String filename){
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename, true))){
-            String date = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss").format(new Date());
-            writer.write(date + ";" + stringToWrite);
-            writer.newLine();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     public static void writeFile (ArrayList<String> stringArrayList, String filename){
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename, false))){
