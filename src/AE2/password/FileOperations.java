@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class FileOperations {
 
-    public static void writeFile (ArrayList<String> stringArrayList, String filename){
+    public static void writeFile (ArrayList<String> stringArrayList, File filename){
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename, false))){
             for (String stringToWrite:stringArrayList) {
                 writer.write(stringToWrite);
@@ -16,15 +16,14 @@ public class FileOperations {
         }
     }
 
-    public static ArrayList<String> readFile(String filename) {
+    public static ArrayList<String> readFile(File file) {
         ArrayList<String> lines = new ArrayList<>();
 
-        File file = new File(filename);
         if (!file.canRead() || !file.isFile()) System.exit(0);
 
         BufferedReader reader = null;
         try {
-            reader = new BufferedReader(new FileReader(filename));
+            reader = new BufferedReader(new FileReader(file));
             String line = null;
             while ((line = reader.readLine()) != null) {
                 lines.add(line);
