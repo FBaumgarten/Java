@@ -3,10 +3,13 @@ package AE2.password;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.io.File;
 
 public class PWGenUI implements ActionListener{
     private static final String DEFAULT_FILE = "C:\\data\\deutsch.txt";
+    private static JFrame mainFrame;
     private JPanel panelMain;
     private JButton buttonGenerate;
     private JTextField textFieldPWAnzahl;
@@ -23,17 +26,23 @@ public class PWGenUI implements ActionListener{
         buttonFile.addActionListener(this);
         file = new File(DEFAULT_FILE);
         textFieldFile.setText(file.getPath());
+        buttonGenerate.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                super.keyTyped(e);
+            }
+        });
     }
 
 
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("Password Generator");
-        frame.setSize(350,400);
-        frame.setContentPane(new PWGenUI().panelMain);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
+        mainFrame = new JFrame("Password Generator");
+        mainFrame.setSize(350,400);
+        mainFrame.setContentPane(new PWGenUI().panelMain);
+        mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        mainFrame.pack();
+        mainFrame.setVisible(true);
     }
 
     @Override
@@ -45,7 +54,7 @@ public class PWGenUI implements ActionListener{
 
     private void buttonFileClick() {
         JFileChooser fileChooser = new JFileChooser();
-        if (fileChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
+        if (fileChooser.showOpenDialog(mainFrame) == JFileChooser.APPROVE_OPTION){
             file = fileChooser.getSelectedFile();
             textFieldFile.setText(file.getPath());
         }
@@ -66,4 +75,5 @@ public class PWGenUI implements ActionListener{
             JOptionPane.showMessageDialog(null,"Wrong Input!");
         }
     }
+
 }
