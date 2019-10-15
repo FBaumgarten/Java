@@ -4,18 +4,9 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class Result {
-    private User user;
     private String date;
     private File testFile;
     private ArrayList<Answer> answers;
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
 
     public String getDate() {
         return date;
@@ -41,10 +32,28 @@ public class Result {
         this.answers = answers;
     }
 
-    public Result(User user, String date, File testFile, ArrayList<Answer> answers) {
-        setUser(user);
+    public Result(String date, File testFile, ArrayList<Answer> answers) {
         setDate(date);
         setTestFile(testFile);
         setAnswers(answers);
+    }
+
+    public Result(String csvString){
+        String[] split = csvString.split(";");
+        setDate(split[0]);
+        setTestFile(new File(split[1]));
+        ArrayList<Answer> ans = new ArrayList<>();
+        for (int i = 2; i < split.length; i++) {
+            ans.add(new Answer(split[i]));
+        }
+    }
+
+    public String toCSV(){
+        StringBuilder csvString;
+        csvString = new StringBuilder(date + ";" + testFile.getPath());
+        for (Answer answer: answers) {
+            csvString.append(";").append(answer.toCSV());
+        }
+        return String.valueOf(csvString);
     }
 }

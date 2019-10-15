@@ -1,5 +1,7 @@
 package AE2.password;
 
+import AE2.project.ubu.model.Question;
+
 import java.io.*;
 import java.util.ArrayList;
 
@@ -16,8 +18,9 @@ public class FileOperations {
         }
     }
 
-    public static ArrayList<String> readFile(File file) {
+    public static ArrayList<String> readFile(File file)  {
         ArrayList<String> lines = new ArrayList<>();
+
 
         if (!file.canRead() || !file.isFile()) System.exit(0);
 
@@ -39,4 +42,6 @@ public class FileOperations {
         }
         return lines;
     }
+
+
 }

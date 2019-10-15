@@ -24,4 +24,14 @@ public class Answer {
         setQuestionID(questionID);
         setAnswer(answer);
     }
+
+    public Answer(String csvString){
+        String[] split = csvString.split(",");
+        setQuestionID(Integer.parseInt(split[0]));
+        setAnswer(split[1]);
+    }
+
+    public String toCSV(){
+        return questionID + "," + answer;
+    }
 }

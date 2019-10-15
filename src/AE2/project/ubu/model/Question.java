@@ -1,5 +1,7 @@
 package AE2.project.ubu.model;
 
+import java.lang.reflect.Array;
+
 public class Question {
     private int id;
     private String qtext;
@@ -33,6 +35,18 @@ public class Question {
         setId(id);
         setQtext(qtext);
         setSolution(solution);
+    }
+
+    public Question (String csv){
+        String[] split = csv.split(";");
+        setId(Integer.parseInt(split[0]));
+        setQtext(split[1]);
+        setSolution(split[2]);
+
+    }
+
+    public String toCSV() {
+        return id + ";" + qtext + ";" + solution;
     }
 }
 
