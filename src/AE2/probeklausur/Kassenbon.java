@@ -28,7 +28,7 @@ public class Kassenbon {
         System.out.println();
         for (Artikel artikel:liste) {
             System.out.println(artikel.getName());
-            System.out.printf("%3dx        %14.2f",artikel.getAnzahl(),artikel.getEinzelpreis());
+            System.out.printf("%3dx%22.2f",artikel.getAnzahl(),artikel.getEinzelpreis());
             summe =+ (artikel.getEinzelpreis() * artikel.getAnzahl());
         }
         System.out.println();

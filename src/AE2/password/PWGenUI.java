@@ -8,7 +8,7 @@ import java.awt.event.KeyEvent;
 import java.io.File;
 
 public class PWGenUI implements ActionListener{
-    private static final String DEFAULT_FILE = "C:\\data\\deutsch.txt";
+    private static final String DEFAULT_FILE = "deutsch.txt";
     private static JFrame mainFrame;
     private JPanel panelMain;
     private JButton buttonGenerate;
