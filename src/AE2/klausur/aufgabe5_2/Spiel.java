@@ -25,13 +25,14 @@ public class Spiel {
         boolean erraten = false;
         Random random = new Random();
         int zuErraten = random.nextInt(101);
+        genutzteZahlen.clear();  //ergänzt, fehlte bei Klausur
         while (!erraten) {
             for (Spieler spieler : mitspieler) {
                 System.out.println("Spieler " + spieler.getName());
                 System.out.println("Ihre Zahl bitte:");
                 int zahl = Integer.parseInt(scanner.nextLine());
                 if (zahl == zuErraten) {
-                    spieler.setPunkte(zahl);
+                    spieler.setPunkte(zahl);  //falsche Punkte, nicht zahl, sondern Anzahl Spieler
                     erraten = true;
                 } else {
                     spieler.setPunkte(spieler.getPunkte() - 1);

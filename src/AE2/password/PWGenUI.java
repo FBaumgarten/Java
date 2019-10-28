@@ -9,6 +9,8 @@ import java.io.File;
 
 public class PWGenUI implements ActionListener{
     private static final String DEFAULT_FILE = "deutsch.txt";
+    private static final int DEFAULT_LENGTH = 20;
+    private static final int DEFAULT_AMOUNT = 20;
     private static JFrame mainFrame;
     private JPanel panelMain;
     private JButton buttonGenerate;
@@ -26,6 +28,8 @@ public class PWGenUI implements ActionListener{
         buttonFile.addActionListener(this);
         file = new File(DEFAULT_FILE);
         textFieldFile.setText(file.getPath());
+        textFieldLaenge.setText(String.valueOf(DEFAULT_LENGTH));
+        textFieldPWAnzahl.setText(String.valueOf(DEFAULT_AMOUNT));
         buttonGenerate.addKeyListener(new KeyAdapter() {
             @Override
             public void keyTyped(KeyEvent e) {
